@@ -2,3 +2,4 @@
 
 * Ruby
 * Python
+* Crystal
