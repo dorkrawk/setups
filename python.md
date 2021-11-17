@@ -1,4 +1,4 @@
-# Set Up Your Computer To Do Some Ruby
+# Set Up Your Computer To Do Some Python
 
 Why is running Python so messy?
 
@@ -11,10 +11,19 @@ Why is running Python so messy?
 ```
 brew install pyenv
 
-pyenv install 3.8 # or whatever the current version is
+pyenv install 3.10.0 # or whatever the current version is
 
-pyenv global 3.8
+pyenv global 3.10.0
 
 # set your shell to load python from pyenv (change .zshrc to .bash_profile, if needed)
-echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
+
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+```
+
+## Confirm
+```
+which python
+# should be [home dir]/.pyenv/shims/python
+python --version
 ```

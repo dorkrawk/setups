@@ -6,18 +6,36 @@ Official setup instructions
 
 * You have [homebrew]((https://brew.sh/)) installed
 
-## Install/Setup Via Brew
+## Install asdf (a version manager)
+
+Install via Homebrew
+```
+brew install asdf
+```
+
+Install asdf-crystal plugin
+```
+asdf plugin-add crystal https://github.com/asdf-community/asdf-crystal.git
+
+# set to use .crystal_version file
+echo "legacy_version_file = yes" >>~/.asdfrc
+```
+
+## Now Install Crystal Using asdf
 
 ```
-brew update
+asdf install crystal 1.2.2 # or whatever the current version is
 
-brew install crystal
+asdf list crystal
+
+asdf global cyrstal 1.2.2
 ```
 
-## To Upgrade Crystal Version
+## Confirm
 
 ```
-brew update
-
-brew upgrade crystal
+crystal -version
 ```
+ 
+
+
